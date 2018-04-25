@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Todo list</title>
+</head>
+
+<body>
+    <input type="text" v-model="newTask.title">
+    <input type="date" v-model="newTask.dueAt">
+    <containter>
+   <center><template>
+        <div id="app">
+            <div v-if="isLoggedIn">
+                <h1 class="title">Vue Todos</h1>
+                <add-task-form @taskAdded="addTask" />
+                <router-view :tasks="taskList" @toggleDone="toggleDone" @removeTask="removeTask" /> </div>
+            <login-page v-else @saveApiTokens="saveApiTokens" /> </div>
+       </template></center>
+    
+ <form class="form" @submit.prevent="login">
+        <div v-if="errorMessage" class="erros">{{ errorMessage }}</div>
+        <div class="form-group">
+            <label for="email">Login name</label>
+            <input 
+                   type="email" 
+                   id="email" 
+                   v-model="loginName" 
+                   placeholder="email" 
+                   autocomplete="username" 
+                   required
+                   > 
+                </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                   type="email" 
+                   id="email" 
+                   v-model="loginName" 
+                   autocomplete="current-password" 
+                   required
+                    > 
+                </div>
+
+        <button type="submit" @click="login">
+ LOGIN
+</button>
+        
+        <button @click="logout">LOGOUT</button>
+
+    <button type="submit" @click="saveTask(newTask)">SAVE</button>
+
+        
+    </form>
+    
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    </body>
+</html>

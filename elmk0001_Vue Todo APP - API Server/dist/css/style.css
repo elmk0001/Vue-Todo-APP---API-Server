@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body,
+html {
+    min-height: 100%;
+    height: 100%
+}
+
+body {
+    background: #f5f5f5;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: auto;
+}
+
+.h2 {
+    font-size: 15px;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1
+}
+
+.container {
+     width: 400px;
+    margin: 0 auto;
+    
+}
+
+.todo-wrapper {
+    height: 55%;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .1);
+    width: 380px
+}
+
+.todo-header {
+    border-radius: 6px 6px 0 0;
+    background: url(http://i68.tinypic.com/23maa1t.png>) no-repeat;
+    background-size: cover;
+    padding: 55px 20px;
+    position: relative
+}
+
+.todo-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 6px 6px 0 0
+}
+
+.todo-header time {
+    color: #fff;
+    display: block;
+    position: relative
+}
+
+.todo-header time .day {
+    font-size: 5em;
+    float: left;
+    margin-right: 15px
+}
+
+.todo-header time .dayofweek {
+    display: block;
+    margin-top: 13px;
+    font-size: 2em;
+    font-weight: 700
+}
+
+.todo-header .add-circle {
+    position: absolute;
+    background: #eaeaea;
+    color: #000;
+    border-radius: 60%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    right: 20px;
+    bottom: -20px;
+    box-shadow: 0 0 13px #bababa;
+    cursor: pointer
+}
+
+.todo-form {
+    margin: 15px 0;
+    width: 100%
+}
+
+.todo-form input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #E6E6E6;
+    font-family: inherit;
+    padding: 5px 0;
+    outline: 0
+}
+
+.todo-form input:focus {
+    border-bottom-color: #ffb72b;
+}
+
+.todo-content .todo-content-title {
+    padding: 20px
+}
+
+.todo-content .todo-content-title h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #4C4646
+}
+
+.todo-content .todo-content-title .task-report {
+    font-size: .9em;
+    color: #afafaf;
+    margin-top: 5px
+}
+
+.todo-list {
+    list-style: none
+}
+
+.todo-list .todo-item {
+    padding: 15px 20px;
+    border-top: 1px solid #f1f1f1;
+    position: relative
+}
+
+.todo-list .todo-item.task-done .text {
+    color: #ccc
+}
+
+.todo-list .todo-item .text {
+    margin-top: -2px;
+    padding-left: 26px;
+    padding-right: 35px
+}
+
+.todo-list .todo-item .action-popup {
+    position: absolute;
+    right: 0;
+    top: 23px;
+    border: 1px solid #EFEFEF;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+    display: none;
+    z-index: 99999
+}
+
+.todo-list .todo-item .action-popup.show {
+    display: block
+}
+
+.todo-list .todo-item .action-popup li {
+    padding: 3px 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 18px;
+    border-radius: 3px
+}
+
+.todo-list .todo-item .action-popup li i {
+    margin-right: 5px
+}
+
+.todo-list .todo-item .action-popup li:hover {
+    background: #f5f5f5
+}
+
+.todo-list .todo-item .label {
+    display: inline-block;
+    background: #ff3c41;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer
+}
+
+.todo-list .todo-item .label.normal {
+    background: #ffb72b
+}
+
+.todo-list .todo-item .label.other {
+    background: #46c4f3
+}
+
+.todo-list .todo-item .label .action-pick-label {
+    left: 0;
+    width: 140px
+}
+
+.todo-list .todo-item .label .action-pick-label li {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2)
+}
+
+.todo-list .todo-item .label .action-pick-label li:hover {
+    opacity: .6
+}
+
+.todo-list .todo-item .label .action-pick-label .important {
+    background: #ff3c41
+}
+
+.todo-list .todo-item .label .action-pick-label .normal {
+    background: #ffb72b
+}
+
+.todo-list .todo-item .label .action-pick-label .other {
+    background: #46c4f3
+}
+
+.todo-list .todo-item .todo-action {
+    position: absolute;
+    right: 10px;
+    top: 12px
+}
+
+.todo-list .todo-item .todo-action .more {
+    cursor: pointer
+}
+
+.todo-list .todo-item .todo-action .more span {
+    display: inline-block;
+    margin: 0 1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 20%;
+    background: #000000
+}
+
+.todo-list .todo-item .todo-action .more:hover span {
+    background: #DADADA
+}
+
+.todo-list .todo-item.editing input {
+    border: none;
+    font-family: inherit;
+    outline: 0;
+    font-size: 1em;
+    width: 100%;
+    background: 0 0
+}
